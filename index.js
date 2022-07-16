@@ -16,7 +16,7 @@ const twittear = async (texto, sinVideo) => {
       await client.v1.tweet(`${texto}, @AgueroSergioKun!`);
     } else {
       const mediaId = await client.v1.uploadMedia('felizJueves.mp4');
-      await client.v1.tweet(`${texto}, @AgueroSergioKun!`, { media_ids: false && [mediaId] });
+      await client.v1.tweet(`${texto}, @AgueroSergioKun!`, { media_ids: [mediaId] });
     }
   } catch (error) {
     console.log('######## PUM ########');
