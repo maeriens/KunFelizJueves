@@ -19,7 +19,9 @@ const twittear = async (texto, sinVideo) => {
       await client.v1.tweet(`${texto}, @AgueroSergioKun!`, { media_ids: false && [mediaId] });
     }
   } catch (error) {
+    console.log('######## PUM ########');
     console.log(error);
+    console.log('######## PUM ########');
   }
 }
 
@@ -27,10 +29,16 @@ const hoy = new Date();
 
 const cumple = hoy.getMonth() === 5 && hoy.getDate == 2;
 const esJueves = hoy.getDay() === 4;
+
 if (esJueves && cumple) {
-  twittear('Feliz jueves y feliz cumpleaños')
+  console.log('Es jueves y es el cumple del Kun!');
+  twittear('Feliz jueves y feliz cumpleaños');
 } else if (esJueves) {
+  console.log('Es jueves!');
   twittear('Feliz jueves');
 } else if (cumple) {
+  console.log('Es el cumple del Kun!');
   twittear('Feliz cumpleaños', true);
+} else {
+  console.log('Nada importante pasa hoy');
 }

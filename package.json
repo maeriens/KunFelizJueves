@@ -1,11 +1,17 @@
 {
   "name": "feliz-jueves",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Deseándole feliz jueves al Kun Agüero",
   "main": "index.js",
   "author": "Mariano Perdomo",
+  "scripts": {
+    "lint": "eslint index.js"
+  },
   "dependencies": {
     "dotenv": "^16.0.1",
     "twitter-api-v2": "^1.12.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.19.0"
   }
 }
